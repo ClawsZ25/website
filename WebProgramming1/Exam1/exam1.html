@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="exam1.css">
+    <script src="exam1.js"defer></script>
+    <title>Exam1 Website</title>
+
+</head>
+
+<body>
+    <div id="diceContainer">
+        <h1> Dice Roller</h1>
+        <h2>(Random Number Generator)</h2>
+        <form>
+            <label for="dieSides">Enter the number of sides per dice:</label>
+            <br>
+            <input type="number" id="dieSides">
+            <br>
+            <label for="amountOfRoles">Enter the number of times to roll:</label>
+            <br>
+            <input type="number" id="amountOfRoles">
+            <br>
+            <br>
+            <button type="button" id="roll" class="buttonFormat" onclick="GenerateRolls()">Roll</button>
+            <br>
+        </form>
+        <br>
+        <span>Dice:</span>
+        <br>
+        <span>Rolls:</span>
+        <span id="rollSpan"></span>
+        <br><br>
+
+        <button type="button" id="clearButton" class="buttonFormat" onclick="ClearRolls()">Clear</button>
+
+    </div>
+   
+    
+</body>
+
+
+</html>

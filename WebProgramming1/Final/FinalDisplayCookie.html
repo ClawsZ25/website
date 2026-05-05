@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Final Exam: Read Cookie</title>
+
+<script>
+function readCookie() {
+    let fields = {};
+    if (document.cookie) {
+        let cookieList = document.cookie.split(";");
+        for (let items of cookieList) {
+            let cookie = items.split("=");
+            let name = cookie[0].trim();
+            let value = decodeURIComponent(cookie[1]);
+            fields[name] = value;
+        }
+    }
+    return fields;
+}
+
+function checkCookie() {
+    if (document.cookie) {
+        const info1 = document.getElementById("cookie1");
+        const info2 = document.getElementById("cookie2");
+        const info3 = document.getElementById("expDate1");
+        const info4 = document.getElementById("expDate2");
+        
+
+        let CookieData = readCookie();
+
+        info1.value = CookieData.Lastname;
+        info2.value = CookieData.salary;
+        
+        
+        
+    } else {
+        alert("No cookie Data found");
+    }
+}
+</script>
+
+<link rel="stylesheet" href="FinalExam.css" />
+</head>
+
+<body onload="checkCookie()">
+
+<h2>Reading some Cookies!</h2>
+
+<div id="cookieReadOutputDiv">
+    
+    <form id="valueForm">
+        Lastname:<br>
+        <input type="text" id="cookie1"><br><br>
+
+        Salary:<br>
+        <input type="text" id="cookie2"><br><br>
+
+        <!-- Expire Date for cookie1:<br>
+        <input type="text" id="expDate1"><br><br>
+
+        Expire Date for cookie2:<br>
+        <input type="text" id="expDate2"><br><br> -->
+    </form>
+
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="page3styles.css">
+    <!-- <link rel="stylesheet" href="casestudy.css"> -->
+    <script src="page3.js"defer></script>
+    <title>Case Study Website Page2</title>
+
+</head>
+
+<body>
+    <div id ="contentP2">
+        <div id="webpageTitleP3" class="full-width-div">
+            <header>
+            <h1 id="HomepageTitleP3">Leave a Review Case Study</h1>
+            </header>
+        </div>
+        <div id="reviewForm">
+            <form>
+                <label for="username"><span class="asterick">*</span>Enter your Username: </label>
+                <input type="text" id="username" required/>
+                <label for="userEmail"><span class="asterick">*</span>Enter your Email:</label>
+                <input type="email" id="userEmail" placeholder="Enter your email" required>
+                <label for="review type"><span class="asterick">*</span>Select what type of review</label>
+                <!-- <input type="checkbox" id="review type"/> -->
+                <select id="review type" required>
+                    <option value="" selected disabled hidden>-- Select a Review Type --</option>
+                    <option value="Good">Good</option>
+                    <option value="Bad">Bad</option>
+                </select>
+                <label for ="review"><span class="asterick">*</span>Leave a Review of the Website</label>
+                <textarea id="review" name="review" rows="4" cols="50" placeholder="Write your message here..." required></textarea>
+
+
+
+                <input type="submit"/>
+                <p id="reviewValidation">Review is</p>
+            </form>
+            
+
+
+        </div>
+
+        </div>
+            
+    
+
+
+    <footer>
+    <p>Author: Zachary Clawson<br>Date: 09/26/25</p>
+    <p><a href="homepage.html">League Of Legends Esports</a></p>
+    <p><a href="page2.html">CyberSecurity CaseStudy</a></p>
+    </footer>
+    
+</body>
+
+
+
+</html>

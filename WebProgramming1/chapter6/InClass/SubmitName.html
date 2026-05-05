@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      JavaScript 7th Edition
+      Chapter 6
+      Chapter Case
+
+      Author: 
+      Date:   
+
+      Filename: js06a.html
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Chapter 6 In class</title>
+   <script>
+      window.addEventListener("DOMContentLoaded", () => {
+         //retirve the data from the url
+        var formData = location.search.slice(1)// grab everything after the ?
+        formData = formData.replace(/\+/g, " ");// replace the + with spaces
+        formData = decodeURIComponent(formData); // decode the url, ex.%20 -> space
+        formFields = formData.split(/[&=]/g); // split into an array of field names and values 
+        // adding window.var makes the variable global
+        let para = document.getElementById("text");
+        para.textContent = "your first name is " + formFields[1] + " and your last name is " + formFields[3] + " You picked city " +
+                           formFields[5] + " you picked radio button " + formFields[7];
+
+        //loop through and put form field in formStuff
+        let stuff = document.getElementById("formStuff");
+        for(let i=0; i < formFields.length; i++){
+            stuff.innerHTML += `FormField Element ${i} is:  ${formFields[i]}!  `;
+            stuff.innerHTML += "<br>";
+        }
+
+        // now have things like formFields[1]
+        document.forms.data.elements.firstNameLabel.value = formFields[0];
+        document.forms.data.elements.firstName.value = formFields[1];
+        document.forms.data.elements.lastNameLabel.value = formFields[2];
+        document.forms.data.elements.lastName.value = formFields[3];
+
+      });
+
+      //put data into input text box
+      
+      
+        
+   </script> 
+  
+   <script src="Name.js" defer></script>
+</head>
+
+<body>
+
+   <form id="data" name="data">
+      <input type="text" id="firstNameLabel" name="firstNameLabel" value="" readonly/>
+      <input type="text" id="firstName" name="firstName" value="" readonly/>
+      <input type="text" id="lastNameLabel" name="lastNameLabel" value="" readonly/>
+      <input type="text" id="lastName" name="lastName" value="" readonly/>
+
+   </form>
+   
+   
+    <p id="text">This is the submission form</p>
+      <br><br>
+
+    <h1>This is the Field form array</h1>
+    <span id="formStuff"></span>
+
+    
+
+    
+    
+   
+   
+</body>
+</html>

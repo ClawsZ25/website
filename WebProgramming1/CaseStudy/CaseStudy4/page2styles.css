@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'LeagueFont';
+    src: url("Fonts/LeagueGothic-Regular.ttf"), format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#webpageTitleP2{
+    /*background-image: ;*/
+    background-color: #111;
+}
+
+.full-width-div {
+  width: 100%;      /* stretch across the page */
+  margin: 0;        /* remove default margins */
+  padding: 10px;       /* optional */
+}
+
+
+#HomepageTitleP2{
+    text-align: center;
+    color: yellow;
+    font-family: "LeagueFont", sans-serif;
+    
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* extends content to fill the page */
+  margin: 0;
+  padding: 0;
+  background-color: whitesmoke;
+}
+
+#contentP2 {
+    flex: 1;
+}
+
+footer{
+  background-color: #111;
+  text-align: center;
+  padding: 5px 0;
+  color: yellow;
+
+}
+
+footer a {
+    color: cyan;        /* bright color stands out on dark background */
+    font-weight: bold;  /* makes it more prominent */
+    text-decoration: underline; /* remove underline if you want a clean look */
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Final Exam for Web Programming</title>
+
+<script src="FinalExam.js" defer></script>
+<link rel="stylesheet" href="FinalExam.css" />
+
+
+<script >
+        function writeCookie(name, value, expDate, path, domain, secure){
+            //check if name and value actually exists
+            if(name && value){
+                // grab the name string data and use encodeURI so computer can interpret
+                let cStr = name + "=" + encodeURI(value);
+                // if expiration date exists add it
+                if(expDate){
+                    cStr += ";expires=" + expDate.toUTCString();
+                }
+                //if a path exists add it to the cookie string
+                if(path){
+
+                cStr += ";path" + path;
+                }
+                //if domain exists add
+                if(domain){
+                    cStr += ";domain=" + path;
+                }
+                //if secure exists add it to the cookie string
+                if(secure){
+                    cStr += ";secure=" + secure;
+                }
+                document.cookie = cStr;
+
+
+            }
+
+
+        }
+
+        function collectValues(){
+            const info1 = document.getElementById("value1").value;
+            const info2 = document.getElementById("value2").value;
+            const info3 = document.getElementById("value3").value;
+            const info4 = document.getElementById("value4").value;
+            // date is 2 days from now
+            expDate = new Date("2025-12-13");
+           
+            const outputDiv = document.getElementById("output");
+
+            outputDiv.innerHTML = `<p> Collected Value 1: ${info1} </p>`;
+            outputDiv.innerHTML += `<p> Collected Value 2: ${info2} </p>`;
+            outputDiv.innerHTML += `<p> Collected Value 2: ${info3} </p>`;
+            outputDiv.innerHTML += `<p> Collected Value 2: ${info4} </p>`;
+
+            
+            // for the first cookie
+            writeCookie(info1, info2, expDate);
+            //for the second cookie
+            writeCookie(info3, info4, expDate);
+        }
+    </script>
+
+</head>
+
+<body>
+    <h2>Final Exam</h2>
+    <h3>Setting some Cookies</h3>
+
+    <div id="writeCookieOutputDiv">
+
+    <form id="FinalForm" name="FinalForm" method="get" action="FinalDisplayCookie.html"> 
+        Name of LastName Cookie: <br>
+        <input type="text" id="value1" name="value1"><br><br>
+
+        Value of Cookie: <br>
+        <input type="text" id="value2" name="value2"><br><br>
+
+        Name of Salary Cookie: <br>
+        <input type="text" id="value3" name="value3"><br><br>
+
+        Value of Cookie: <br>
+        <input type="text" id="value4" name="value4"><br><br>
+        
+
+        <button type="button" onclick="collectValues()" class="buttonClass">Cache The Cookie</button>
+        
+        <br><br>
+         <input type="submit" id="submitButton" name="submitButton" class="buttonClass"/>
+
+    </form>
+
+    </div>
+</body>
+
+</html>

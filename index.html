@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zach Clawson | Software Engineer</title>
+
+    <link rel="stylesheet" href="homepage.css">
+    <script src="homepage.js" defer></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Side Navigation -->
+    <nav id="side-nav">
+        <button id="close-nav">&times;</button>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/zachary-clawson/">LinkedIn</a></li>
+            <li><a href="https://github.com/ClawsZ25">GitHub</a></li>
+            <li><a href="https://open.kattis.com/users/zachary-clawson1" target="_blank">Kattis1</a></li>
+            <li><a href="https://open.kattis.com/users/zachary-clawson" target="_blank">Kattis2</a></li>
+        </ul>
+    </nav>
+
+    <!-- Overlay -->
+    <div id="overlay"></div>
+
+    <!-- Top Banner -->
+    <header class="top-banner">
+        <div class="banner-content">
+            <h1>Welcome</h1>
+            <h2>Zach Clawson: Software Engineer – Game Developer</h2>
+        </div>
+
+        <img 
+            src="Images/me.jpg" 
+            alt="Zach Clawson" 
+            class="profile-pic" 
+            id="profile-pic"
+        >
+    </header>
+    <nav class="section-nav">
+        <button class="nav-tab" data-section="about">About Me</button>
+        <button class="nav-tab" data-section="games">Game Projects</button>
+        <button class="nav-tab" data-section="coding">Coding Projects</button>
+        <button class="nav-tab" data-section="hobbies">Hobbies</button>
+
+    </nav>
+    
+
+    <!-- Main Content -->
+    <section class="content-area">
+        <div class="content-section active" id="about">
+            <div class="container">
+                <h3 class="section-title">About Me</h3>
+
+                <p class="about-intro">
+                    I am a senior Applied Computing major at PennWest Edinboro with experience 
+                    in software development, software engineering, game programming, creative writing,
+                    and web and database technologies. Throughout my time in college, I have taken on leadership,
+                    technical, and service roles that strengthened my collaboration and problem-solving skills.
+                    I pride myself on being creative, reliable, respectful, thoughtful, and hard-working.
+                </p>
+
+                <div class="about-grid">
+
+                    <div class="about-card">
+                        <h4>Computer Science Club</h4>
+                        <p>Secretary → Vice President → President</p>
+                    </div>
+
+                    <div class="about-card">
+                        <h4>COGS (Creation of Games Society)</h4>
+                        <p>Co-Founder & Treasurer</p>
+                    </div>
+
+                    <div class="about-card">
+                        <h4>Programming Team</h4>
+                        <p>Member & Captain</p>
+                    </div>
+
+                    <div class="about-card">
+                        <h4>Computer Science Tutor</h4>
+                        <p>Academic support in programming and core CS concepts</p>
+                    </div>
+
+                    <div class="about-card">
+                        <h4>Community Assistant</h4>
+                        <p>Leadership & mentorship in campus housing</p>
+                    </div>
+
+                    <div class="about-card">
+                        <h4>Catholic Scots</h4>
+                        <p>Active campus organization member</p>
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
+        <!-- This is the start of the Games Tab where I display my Game projects -->
+        <div class="content-section" id="games">
+            <h3 class="section-title">My Game Development Journey</h3>
+
+            <div class="game-grid">
+                <!-- Game Card for AATTMF -->
+                 <button class="game-card" data-game="aattmf">
+                    <h4>AATTMF</h4>
+                    <p>Accident at The Time Machine Factory</p>
+                 </button>
+
+                 <button class="game-card" data-game="picpoc">
+                    <h4>Picnic Pocketers</h4>
+                    <p>A fun game for collecting food</p>
+                 </button>
+
+                 <button class="game-card" data-game="cc">
+                    <h4>Contract Construction</h4>
+                    <p>Infiltrate and complete the mission</p>
+                 </button>
+                 <button class="game-card" data-game="mga">
+                    <h4>Mitten's Great Adventure</h4>
+                    <p>Recover the Whole(y) Milk Jug</p>
+                 </button>
+                 <button class="game-card" data-game="yr">
+                    <h4>Yeti Run</h4>
+                    <p>Ski down the mountain, and stop the Lava People</p>
+                 </button>
+                 <button class="game-card" data-game="cg">
+                    <h4>Crazy Games</h4>
+                    <p>A venture into mobile app development</p>
+                 </button>
+
+            </div>
+            <!-- The start of the game details -->
+            <div class="game-detail" id="picpoc-detail">
+                <button class="close-game">&times;</button>
+
+                <h3>Picnic Pocketers</h3>
+                <p class="subtitle">A fun game about colleting food</p>
+                <p>
+                    Picnic Pocketers is a game I helped develop in Unreal Engine 4.7 as a
+                    part of a software engineering course. It is small game about collecting
+                    as much food as possible in the given time while avoiding different mobs
+                    and navigating different worlds.
+
+                </p>
+
+                <div class="screenshot-gallery">
+                    <img src="Images/Games/PicnicPocketers/Screenshot 2026-02-03 103050.png" alt="PicPoc screenshot">
+                    <img src="Images/Games/PicnicPocketers/Screenshot 2026-02-03 103205 - Copy.png" alt="PicPoc screenshot">
+                    <img src="Images/Games/PicnicPocketers/Screenshot 2026-02-03 103230 - Copy.png" alt="PicPoc screenshot">
+                    
+                </div>
+
+                <a 
+                    href="Downloads/PicnicPocket 1.zip"
+                    class="download-button"
+                    download
+                >
+                    Download (Windows)
+                </a>
+            </div>
+            <!-- AATTMF -->
+             <div class="game-detail" id="aattmf-detail">
+                <button class="close-game">&times;</button>
+
+                <h3>AATTMF</h3>
+                <p class="subtitle">Accident at the Time Machine Factory</p>
+                <p>
+                    AATTMF is a game I helped develop in Unreal Engine 5.3.2 as a
+                    part of a software engineering course. After a Time machine blows
+                    up at the factory players, traverse across 4 time periods: Prehistoric,
+                    Medieval, Western, and Future. They have collect parts to put the Time machine
+                    back together, reknit the time-stream, and save the world.
+
+                </p>
+
+                <div class="screenshot-gallery">
+                    <img src="Images/Games/AATTMF/Prehistoric.png" alt="AATTMF screenshot">
+                    <img src="Images/Games/AATTMF/Knight.png" alt="AATTMF screenshot">
+                    <img src="Images/Games/AATTMF/SheriffDuel.png" alt="AATTMF screenshot">
+                    <img src="Images/Games/AATTMF/Future.png" alt="AATTMF screenshot">
+                </div>
+
+                <a 
+                    href="Downloads/final presentationAPril30/AATTMF 5.zip"
+                    class="download-button"
+                    download
+                >
+                    Download (Windows)
+                </a>
+            </div>
+
+            <!-- Contract Construction -->
+             <div class="game-detail" id="cc-detail">
+                <button class="close-game">&times;</button>
+
+                <h3>Contract Construction</h3>
+                <p class="subtitle">Infiltrate and complete the mission</p>
+                <p>
+                    Contract Construction is the first 3D game project I helped
+                    develop. It is a spy-like game where the player must avoid detection,
+                    collect the right keys, and defeat the Ultimate Bossman.
+                </p>
+
+                <div class="screenshot-gallery">
+                    <img src="Images/Games/ContractConstruction/Screenshot 2026-02-03 105023.png" alt="ContractConstruction screenshot">
+                    <img src="Images/Games/ContractConstruction/Screenshot 2026-02-03 105035.png" alt="ContractConstruction screenshot">
+                    <img src="Images/Games/ContractConstruction/Screenshot 2026-02-03 105151.png" alt="ContractConstruction screenshot">
+                    <img src="Images/Games/ContractConstruction/Screenshot 2026-02-03 105802.png" alt="ContractConstruction screenshot">
+                    
+                </div>
+
+                <a 
+                    href="Downloads/ContractConstruction.zip"
+                    class="download-button"
+                    download
+                >
+                    Download (Windows)
+                </a>
+            </div>
+
+            <!-- Mitten's Great Adventure -->
+            <div class="game-detail" id="mga-detail">
+                <button class="close-game">&times;</button>
+
+                <h3>Mitten's Great Adventure</h3>
+                <p class="subtitle">Recover the Whole(y) Milk Jug</p>
+                <p>
+                    Mitten's Great Adventure was my first venture in to 2D Game
+                    Development and Game Development as a whole. It's a short and
+                    sweet platformer where you must collect coins, navigate the world,
+                    and get to the milk.
+                </p>
+
+                <div class="screenshot-gallery">
+                    <img src="Images/Games/MittensGreatAdventure/Screenshot 2026-02-13 112218.png" alt="Mitten's Great Adventure screenshot">
+                    <img src="Images/Games/MittensGreatAdventure/Screenshot 2026-02-13 112243.png" alt="Mitten's Great Adventure screenshot">
+                    <img src="Images/Games/MittensGreatAdventure/Screenshot 2026-02-13 112333.png" alt="Mitten's Great Adventure screenshot">
+                    <img src="Images/Games/MittensGreatAdventure/Screenshot 2026-02-13 112420.png" alt="Mitten's Great Adventure screenshot">
+                    <img src="Images/Games/MittensGreatAdventure/Screenshot 2026-02-13 112728.png" alt="Mitten's Great Adventure screenshot">
+
+                </div>
+
+                <a 
+                    href="Downloads/Mitten's Great Adventure.zip"
+                    class="download-button"
+                    download
+                >
+                    Download (Windows)
+                </a>
+
+            </div>
+            <!-- Yeti-Run -->
+            <div class="game-detail" id="yr-detail">
+                <button class="close-game">&times;</button>
+
+                <h3>Yeti Run</h3>
+                <p class="subtitle">Ski down the mountain, and stop the Lava People</p>
+                <p>
+                    This is the result of my second Game Jam that I did with a bunch of buddies.
+                    The theme was Momentum and the extra themes we applied were freeze and
+                    duplication. It was a fun figuring out how to make a line drawing game.
+                    We placed in the middle of the pack.
+                </p>
+
+                <div class="screenshot-gallery">
+                    <img src="Images/Games/YetiRun/Screenshot 2026-02-13 114149.png" alt="Yeti Run screenshot">
+                    <img src="Images/Games/YetiRun/Screenshot 2026-02-13 114206.png" alt="Yeti Run screenshot">
+                    <img src="Images/Games/YetiRun/Screenshot 2026-02-13 114226.png" alt="Yeti Run screenshot">
+                    <img src="Images/Games/YetiRun/Screenshot 2026-02-13 114421.png" alt="Yeti Run screenshot">
+
+                </div>
+
+                <a 
+                    href="https://beefboss43.itch.io/yeti-run"
+                    class="download-button"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Play on Itch.io
+                </a>
+
+            </div>
+
+            <!-- Crazy Games -->
+            <div class="game-detail" id="cg-detail">
+                <button class="close-game">&times;</button>
+
+                <h3>Crazy Games</h3>
+                <p class="subtitle">A venture into mobile app development</p>
+                <p>
+                   This is a project I have working in Android studio. It's
+                   an arcade style app where a player can register, log-in,
+                   and complete a series of arcade games. Currently there is
+                   a magic 8-ball that works off sensors and a Simon Says
+                   mini-game.
+                </p>
+
+                <div class="game-video">
+                    <video controls playsinline>
+                        <source src="Videos/video1239579976.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <a 
+                    href="Downloads/12325FinalProjectMoreComplete.zip"
+                    class="download-button"
+                    download
+                >
+                    Download Zip
+                </a>
+
+            </div>
+
+        </div>
+        <!-- ----------This begins the Coding section of my page ------------->
+
+        <div class="content-section" id="coding">
+            <h3 class="section-title">My Coding Journey</h3>
+
+            <div class="coding-grid">
+                <button class="coding-card" data-project="ai">
+                    <h4>AI</h4>
+                    <p>Artificial Intelligence</p>
+                </button>
+
+                <button class="coding-card" data-project="oop">
+                    <h4>OOP</h4>
+                    <p>Object Oriented Programming</p>
+                </button>
+
+                <button class="coding-card" data-project="cgraphics">
+                    <h4>Computer Graphics</h4>
+                    <p>Projects that include games, animations, and model manipulation</p>
+                </button>
+
+                <button class="coding-card" data-project="dsa">
+                    <h4>Data Structures and Algorithms</h4>
+                    <p>Projects that include exploration of different data structures and algorithms</p>
+                </button>
+
+                <button class="coding-card" data-project="webdev">
+                    <h4>Web Development</h4>
+                    <p>Projects that explore the various uses of javascript in web development</p>
+                </button>
+
+                <button class="coding-card" data-project="portfolio">
+                    <h4>Portfolio Website</h4>
+                    <p>This website you're viewing</p>
+                </button>
+
+                <button class="coding-card" data-project="kattis">
+                    <h4>Kattis Solutions</h4>
+                    <p>Competitive programming problems</p>
+                </button>
+
+                <button class="coding-card" data-project="csprinciples">
+                    <h4>CS230</h4>
+                    <p>Principles of Programming</p>
+                </button>
+
+                <button class="coding-card" data-project="csintro">
+                    <h4>CS130</h4>
+                    <p>Introduction to Programming</p>
+                </button>
+            </div>
+
+            <!-- Artificial Intelligence Detail -->
+             <div class="coding-detail" id="ai-detail">
+                <button class="close-coding">&times;</button>
+
+                <h3>Artificial Intelligence</h3>
+                <p>
+                    In this class I built basic algorithms that mimic intelligence and were
+                    able to solve A Sudoku (4x4) puzzle and implement a variety of searches to solve an 8-puzzle.
+                    I also learned the logical language Prolog which we used to navigate a dungeon (grid with obstacles).
+                    A zip file containg this work is below.
+                </p>
+
+                <a 
+                    href="Downloads/AI Code.zip"
+                    class="download-button"
+                    download
+                >
+                    Download Zip
+                </a>
+
+             </div>
+
+             <!-- OOP Detail -->
+             <div class="coding-detail" id="oop-detail">
+                <button class="close-coding">&times;</button>
+
+                <h3>Object Orientened programming</h3>
+                <p>
+                    In this class I learned about, user-defined types, information hiding, encapsulation,
+                    objected-oriented design, object-oriented programming basics, classes and objects, methods,
+                    inter-object communication, public vs private interface implementation, constructors and destructors,
+                    inheritance, operator overloading, polymorphism, and templates. The following Zip contains projects such as
+                    an implementation of The Simple Game System (TSGS) by Chris Gonnerman, a 2D array class, and an implementation
+                    of the game concentration.
+                </p>
+
+                <a 
+                    href="Downloads/OOD_Projects.zip"
+                    class="download-button"
+                    download
+                >
+                    Download Zip
+                </a>
+
+             </div>
+
+             <!-- Computer Graphics detail -->
+            <div class="coding-detail" id="cgraphics-detail">
+                <button class="close-coding">&times;</button>
+
+                <h3>Computer Graphics</h3>
+                <p class="subtitle">Projects that include games, animations, and model manipulation</p>
+
+                <p>
+                    A collection of projects showcasing key concepts in computer graphics, including graphical display devices,
+                    graphics software primitives, and the representation, manipulation, and rendering of two- and three-dimensional objects.
+                    The work also highlights interactive graphics, user interface design, animation,
+                    and the application of matrix-based computations in coding.
+                </p>
+
+                <a href="ComputerGraphics/HW1/ComputerGraphics.html"
+                    target="_blank"
+                    class="download-button">
+                    View Projects
+                </a>
+            </div>
+
+            <!-- Data Structures and Algorithms Detail -->
+             <div class="coding-detail" id="dsa-detail">
+                <button class="close-coding">&times;</button>
+
+                <h4>Data Structures and Algorithms</h4>
+                    <p>Projects that include exploration stacks, queues, priority queues, linked lists, etc.
+                       I also did a project where we create a menu that acted as a front-end for a game
+                       manager in the back end that could be used to organize a colletion of board games.
+                       Algorithm related projects include a program that solves the Stable matching problem
+                       and graph traversal using Breadth-First Search (BFS).
+                    </p>
+
+                <a 
+                    href="Downloads/DataStructures.zip"
+                    class="download-button"
+                    download
+                >
+                    Download Zip
+                </a>
+
+             </div>
+
+            <!-- Portfolio Detail -->
+            <div class="coding-detail" id="portfolio-detail">
+                <button class="close-coding">&times;</button>
+
+                <h3>Portfolio Website</h3>
+                <p class="subtitle">Personal Web Development Project</p>
+
+                <p>
+                    I designed and built a responsive portfolio using HTML, CSS, and JavaScript.
+                    Features include dynamic tabs, interactive game showcases, and clean UI design.
+                </p>
+
+            </div>
+
+            <!-- Kattis Detail -->
+            <div class="coding-detail" id="kattis-detail">
+                <button class="close-coding">&times;</button>
+
+                <h3>Kattis Solutions</h3>
+                <p class="subtitle">Problem Solving & Algorithms</p>
+
+                <p>
+                    A collection of algorithmic solutions written in C++ covering graphs,
+                    dynamic programming, and data structures.
+                </p>
+
+                <a href="https://open.kattis.com/users/zachary-clawson"
+                    target="_blank"
+                    class="download-button">
+                    View Profile
+                </a>
+            </div>
+
+        
+
+            <!-- Web Devlopment Detail -->
+            <div class="coding-detail" id="webdev-detail">
+                <button class="close-coding">&times;</button>
+
+                <h4>Web Development</h4>
+                <p>Projects that explore the various uses of javascript in web development</p>
+
+                <p>
+                    A collection of projects showcasing various uses of the java script language from
+                    dynamically adding elements to building a checkout menu to using cookies to track informtation.
+                    This class I also made a somewhat personalized website that could be used for information across
+                    the many leagues in League Of Legends esports.
+                </p>
+
+                <a href="WebProgramming1/WPindex.html"
+                    target="_blank"
+                    class="download-button">
+                    View WebDev
+                </a>
+            </div>
+
+            <!-- CS 230-->
+             <div class="coding-detail" id="csprinciples-detail">
+                <button class="close-coding">&times;</button>
+
+                <h3>Principles to Programming</h3>
+                <p>
+                    This includes some projects of when I first started out on my coding journey.
+                    It includes an encyrption (Caesar) program, a High-Ho-Cherry-O simulation,
+                    and a simple songs database.
+                </p>
+
+                <a 
+                    href="Downloads/cs230.zip"
+                    class="download-button"
+                    download
+                >
+                    Download Zip
+                </a>
+
+             </div>
+
+             <!-- Intro to Programming -->
+             <div class="coding-detail" id="csintro-detail">
+                <button class="close-coding">&times;</button>
+
+                <h3>Introduction to Programming</h3>
+                <p>
+                    These are my projects from when I first began to learn how to code in C++
+                    It includes a madlib, a simulation of the public good games, a unit converter,
+                    and a guessing game between player and computer.
+                </p>
+
+                <a 
+                    href="Downloads/introToProgramming.zip"
+                    class="download-button"
+                    download
+                >
+                    Download Zip
+                </a>
+
+             </div>
+        </div>
+
+<!-- This begins the Hobbies section of my page -->
+        <div class="content-section" id="hobbies">
+            <div class="container">
+                
+                <h3 style="text-align: center; font-size: 2rem; margin-bottom: 1rem;">Hobbies and Intrests </h3>
+                <div class="hobbies-grid">                
+                    <div class="hobby-card" data-hobby="esports">
+                        <h4>Esports</h4>
+                        <p>Watching and following competitive gaming scenes.</p>
+                    </div>
+                    <div class="hobby-card" data-hobby="reading">
+                        <h4>Reading</h4>
+                        <p>Enjoying fiction and storytelling.</p>
+                    </div>
+
+                    <div class="hobby-card" data-hobby="videogames">
+                        <h4>Video Games</h4>
+                        <p>My favorite games.</p>
+                    </div>
+
+                    
+
+                    <div class="hobby-card" data-hobby="boardgames">
+                        <h4>Board Games</h4>
+                        <p>Strategy and social competition.</p>
+                    </div>
+                    <div class="hobby-card" data-hobby="familyandpets">
+                        <h4>Family and Pets</h4>
+                        <p>What could I do without them?</p>
+                    </div>
+
+                    <div class="hobby-card" data-hobby="travel">
+                        <h4>Travel</h4>
+                        <p>Exploring new places.</p>
+                    </div>
+
+                    <div class="hobby-card" data-hobby="sports">
+                        <h4>Sports</h4>
+                        <p>My sports Journy throughout the years.</p>
+                    </div>
+                    <div class="hobby-card" data-hobby="otherfun">
+                        <h4>Miscellaneous</h4>
+                        <p>Fun I've had through the years.</p>
+                    </div>
+                    <div class="hobby-card" data-hobby="writing">
+                        <h4>Writing</h4>
+                        <p>I love creating and building new worlds and stories.</p>
+                    </div>
+                    
+                </div>
+                
+                <div class="hobby-detail" id="esports-detail">
+                    <button class="close-hobby">&times;</button>
+
+                    <h3>Esports</h3>
+                    <p>My favorite Teams and Me</p>
+
+                    <div class="slideshow">
+                        <button class="prev">&#10094;</button>
+
+                        <div class="slide active">
+                            <img src="Images/Hobbies/Esports/EsportsMe.jpg">
+                            <p class="caption">This is me repping my PennWest Edinboro esports freshman year.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Esports/FLYQUESTlogo.png">
+                            <p class="caption">My favourite League of Legends Team.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Esports/NRGlogo.jpg">
+                            <p class="caption">My favourite Valorant Team.</p>
+                        </div>
+                        
+
+                        <button class="next">&#10095;</button>
+                    </div>
+                </div>
+
+                <div class="hobby-detail" id="videogames-detail">
+                    <button class="close-hobby">&times;</button>
+
+                    <h3>Video Games</h3>
+                    <p>My favorite Video games to play and Watch</p>
+
+                    <div class="slideshow">
+                        <button class="prev">&#10094;</button>
+
+                        <div class="slide active">
+                            <img src="Images/Hobbies/VideoGames/LOLlogo.jpg">
+                            <p class="caption">League of Legends: My favorite champ is Kia'Sa.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/VideoGames/Valorantlogo.png">
+                            <p class="caption">Valorant: My favorite agent is Clove.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/VideoGames/PokeMonBlackAndWhite.jpg">
+                            <p class="caption">One of my first games on my first console.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/VideoGames/FF7logo.jpg">
+                            <p class="caption">My favorite RPG Series of all time.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/VideoGames/KingdomHearts.jpg">
+                            <p class="caption">My second favorite RPG series.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/VideoGames/MarioOdyssey.jpg">
+                            <p class="caption">My favorite Mario game to watch. Go Moarf + Smant.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/VideoGames/TFTlogo.jpg">
+                            <p class="caption">TFT: My favorite auto battler.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/VideoGames/AmongUslogo.jpg">
+                            <p class="caption">One of my favorite party/friend games.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/VideoGames/PVZGWlogo.jpg">
+                            <p class="caption">One of my first competive Hero shooters. Childhood memories.</p>
+                        </div>
+
+                        <button class="next">&#10095;</button>
+                    </div>
+                </div>
+
+                <div class="hobby-detail" id="reading-detail">
+                    <button class="close-hobby">&times;</button>
+
+                    <h3>Reading</h3>
+                    <p>My favorite books and novels across different mediums</p>
+
+                    <div class="slideshow">
+                        <button class="prev">&#10094;</button>
+
+                        <div class="slide active">
+                            <img src="Images/Hobbies/Reading/StormLight.jpg">
+                            <p class="caption">FAVORITE!! Brandon Sanderson the G.O.A.T.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Reading/WaxAndWayne.jpg">
+                            <p class="caption">Second favorite Cosmere series.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Reading/YANP.jpg">
+                            <p class="caption">Favorite Cosmere hidden novel.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Reading/RedRising.jpg">
+                            <p class="caption">Another great series.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Reading/Unordinary.jpg">
+                            <p class="caption">My favorite webtoon of all time.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Reading/Legend.jpg">
+                            <p class="caption">A childhood series that hooked me deeper into reading.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Reading/silverMask.jpg">
+                            <p class="caption">Another childhood favorite.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Reading/ShelfOfSanderson.jpg">
+                            <p class="caption">My Shelf of Sanderson.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Reading/TOG.jpg">
+                            <p class="caption">Second favorite Webtoon.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Reading/BWFK.jpg">
+                            <p class="caption">I've been a little more into cosy novels lately. Great book.</p>
+                        </div>
+
+                        <button class="next">&#10095;</button>
+                    </div>
+                </div>
+
+                <div class="hobby-detail" id="boardgames-detail">
+                    <button class="close-hobby">&times;</button>
+
+                    <h3>Board Games</h3>
+                    <p>Loads of fun with my family and friends</p>
+
+                    <div class="slideshow">
+                        <button class="prev">&#10094;</button>
+
+                        <div class="slide active">
+                            <img src="Images/Hobbies/BoardGames/Dominion.jpg">
+                            <p class="caption">My current favorite board game. The expansions add so much fun.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/BoardGames/Coyote.jpg">
+                            <p class="caption">Current favorite deduction game.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/BoardGames/Clue.jpg">
+                            <p class="caption">Classic game with the family.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/BoardGames/JackBox.png">
+                            <p class="caption">Lots of laughs with friends and family.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/BoardGames/Risk.jpg">
+                            <p class="caption">Loved playing in highschool history class.</p>
+                        </div>
+                        
+
+                        <button class="next">&#10095;</button>
+                    </div>
+                </div>
+
+                <div class="hobby-detail" id="familyandpets-detail">
+                    <button class="close-hobby">&times;</button>
+
+                    <h3>Family and Pets</h3>
+                    <p>Woderful Memories and Pictures</p>
+
+                    <div class="slideshow">
+                        <button class="prev">&#10094;</button>
+
+                        <div class="slide active">
+                            <img src="Images/Hobbies/FamilyAndPets/Callie1.jpg">
+                            <p class="caption">My callico cat Callie.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/FamilyAndPets/FamilyShopping1.jpg">
+                            <p class="caption">Shopping with my Grandparents.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/FamilyAndPets/Max1.jpg">
+                            <p class="caption">My Chocolate Lab Max.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/FamilyAndPets/Gia.jpg">
+                            <p class="caption">My Cousin's dog Gia.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/FamilyAndPets/BikingWithFam.jpeg">
+                            <p class="caption">Biking the boardwalk at OC, NJ.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/FamilyAndPets/Shiva.jpg">
+                            <p class="caption">Childhood dog Shiva and Callie.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/FamilyAndPets/Bella.jpg">
+                            <p class="caption">Bella the cat.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/FamilyAndPets/Holly.jpg">
+                            <p class="caption">Holly the dog.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/FamilyAndPets/SnowmanBuilding.jpg">
+                            <p class="caption">My cousin and younger siblings built a snowman</p>
+                        </div>
+
+                        <button class="next">&#10095;</button>
+                    </div>
+                </div>
+                <!-- Miscellaneous -->
+                <div class="hobby-detail" id="otherfun-detail">
+                    <button class="close-hobby">&times;</button>
+
+                    <h3>Miscellaneous</h3>
+                    <p>Great Memories through life's journey</p>
+
+                    <div class="slideshow">
+                        <button class="prev">&#10094;</button>
+
+                        <div class="slide active">
+                            <img src="Images/Hobbies/Misc/CsClubRush.jpg">
+                            <p class="caption">At SuperHero Themed Club Rush.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Misc/MovieWithRon.jpg">
+                            <p class="caption">Movie with my friend Ron.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Misc/CAParadeFloat.jpg">
+                            <p class="caption">Parade Float for Res Life: Whimsical Themed.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Misc/ThriftyThreads1.jpg">
+                            <p class="caption">Community Service at Thrifty Threads.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Misc/CABB.jpg">
+                            <p class="caption">My favorite CA Bulletein Board I've done.</p>
+                        </div>
+                         <div class="slide">
+                            <img src="Images/Hobbies/Misc/SkyDiving.jpg">
+                            <p class="caption">SkyDiving!!!</p>
+                        </div>
+                         <div class="slide">
+                            <img src="Images/Hobbies/Misc/CAAllHall.jpg">
+                            <p class="caption">Splatter Board from CA All Hall where we won All Hall of the year.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Misc/IceShooter.jpg">
+                            <p class="caption">Ice Pea shooter I sketched and colored making Cards for Kids.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Misc/PACISETrees.jpg">
+                            <p class="caption">Trees from WCU while at PACISE.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Misc/SEEK.jpg">
+                            <p class="caption">SEEK at Washinton D.C.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Misc/CardsForKids2.jpg">
+                            <p class="caption">Cards for Kids #2.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Misc/BDubswithCatholicScots.jpg">
+                            <p class="caption">Buffalo Wild Wings with the Catholic Scots.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Misc/EscapeRoomVictory.jpg">
+                            <p class="caption">Solving a Christmas themed Escape Room.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Misc/CSClubPoster.jpg">
+                            <p class="caption">Poster Contest for CS Club.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Misc/BoroSunset.jpg">
+                            <p class="caption">Nice sunset in Edinboro.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Misc/RussWedding.jpg">
+                            <p class="caption">My friend Russ's wedding.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Misc/StPatricksDayFeast.jpg">
+                            <p class="caption">Ballon animal at St.Patrick's day Feast.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Misc/PennStateGame.jpg">
+                            <p class="caption">Penn State Game.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Misc/PuppyPalooza.jpg">
+                            <p class="caption">Me at Puppy Palooza with a friend of mine.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Misc/HuantedHouseOfHorrors.jpg">
+                            <p class="caption">A Haunted House I went through at Ghost Lake with friends.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Misc/Christmas Tree.jpg">
+                            <p class="caption">Nice Christmas Tree in the Mall.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Misc/CardForKids3.jpg">
+                            <p class="caption">Cards for Kids #3.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Misc/FlagFootballWithFriends.jpg">
+                            <p class="caption">Flag Football with Friends.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Misc/SuperBowlParty.jpg">
+                            <p class="caption">SuperBowl Party with Friends.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Misc/ALF.jpg">
+                            <p class="caption">Cool 3D prints at Autumn Leaf Festival.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Misc/InkTober.jpg">
+                            <p class="caption">Sketch I did for Inktober.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Misc/Eclipse.jpg">
+                            <p class="caption">Picture from the eclipse in 2024.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Misc/FirstPurchasedCar.jpg">
+                            <p class="caption">First Purchased Car.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Misc/BuildingFirstPC.jpg">
+                            <p class="caption">Building my first PC.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Misc/PittsburghZooLaternShow.jpg">
+                            <p class="caption">Dragon from the Pittsburgh Zoo latern festival.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Misc/FrenchFieldTrip.jpg">
+                            <p class="caption">Claude Monet Lillies I saw during a French Field trip.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Misc/LaborDayMarket.jpg">
+                            <p class="caption">Younger me at Labor Day Market with some birds.</p>
+                        </div>
+
+                        <button class="next">&#10095;</button>
+                    </div>
+                </div>
+
+                <!-- Travel -->
+                 <div class="hobby-detail" id="travel-detail">
+                    <button class="close-hobby">&times;</button>
+
+                    <h3>Travel</h3>
+                    <p>Adventures throughout the world</p>
+
+                    <div class="slideshow">
+                        <button class="prev">&#10094;</button>
+
+                        <div class="slide active">
+                            <img src="Images/Hobbies/Travel/BeachPic.jpg">
+                            <p class="caption">Picture of my by the 7 Colors Lagoon.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Travel/SpaceCenter.jpg">
+                            <p class="caption">Kennedy Space Center.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Travel/OrangeTree.jpg">
+                            <p class="caption">Pretty Tree in the Caribbean.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Travel/WaterWorksShow.jpg">
+                            <p class="caption">Water Diving show on Wonder of the Sea Cruise.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Travel/CostoMaya.jpg">
+                            <p class="caption">Costa Maya.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Travel/FavMiniGolfOCNJ.jpg">
+                            <p class="caption">Favorite Mini Golf place in Ocean City, NJ.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Travel/PittsburghSkylinefromPNC.jpg">
+                            <p class="caption">Pittsburgh Skyline from PNC Park.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Travel/BoardWalkSunset1.jpg">
+                            <p class="caption">Board Walk Sunset from OC, NJ #1.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Travel/MayanTemple.jpg">
+                            <p class="caption">Mayan Temples in Mexico.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Travel/TennesseCabin.jpg">
+                            <p class="caption">Cabin in Tennesse.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Travel/PoconoMtTrail.jpg">
+                            <p class="caption">Trail in the Pocono Mountains.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Travel/Seagull.jpg">
+                            <p class="caption">Steve the Seagull.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Travel/LifeGuardBooth.jpg">
+                            <p class="caption">Photo of me in a life guard booth at OC, NJ.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Travel/MiniGolfWithPap.jpg">
+                            <p class="caption">Mini Golf with my Pap.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Travel/FloridaSunset.jpg">
+                            <p class="caption">Sunset in Florida.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Travel/UniversalDragon.jpg">
+                            <p class="caption">Dragon at Universal.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Travel/Avatar.jpg">
+                            <p class="caption">Avatar at Disney.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Travel/CanadianGlacier.jpg">
+                            <p class="caption">Standing on a Glacier.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Travel/DCChapel.jpg">
+                            <p class="caption">Inside a Church at Washington D.C.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Travel/CanadianLake.jpg">
+                            <p class="caption">Beautiful lake in Canada.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Travel/CanadianRockies.jpg">
+                            <p class="caption">Breathtaking Canadian Mountain.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Travel/CanadianLakeAndMontains.jpg">
+                            <p class="caption">Lake and Mountain Combo in Canada.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Travel/NJSunrise.jpg">
+                            <p class="caption">Sunrise in New Jersey.</p>
+                        </div>
+                        
+                        
+
+                        <button class="next">&#10095;</button>
+                    </div>
+                </div>
+
+                <div class="hobby-detail" id="sports-detail">
+                    <button class="close-hobby">&times;</button>
+
+                    <h3>Sports</h3>
+                    <p>Journey throughout school</p>
+
+                    <div class="slideshow">
+                        <button class="prev">&#10094;</button>
+
+                        <div class="slide active">
+                            <img src="Images/Hobbies/Sports/LittleLeague.jpg">
+                            <p class="caption">Pitching in Little League.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Sports/BaseballHS.jpg">
+                            <p class="caption">Warming up for an at bat in HS.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Sports/Soccor.jpg">
+                            <p class="caption">Soccor.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Sports/BBLittle.jpg">
+                            <p class="caption">Playing Defense on the Perimeter.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Images/Hobbies/Sports/BasketballHS.heic">
+                            <p class="caption">My twin and I in uniform for HS Basketball.</p>
+                        </div>
+                        
+
+                        <button class="next">&#10095;</button>
+                    </div>
+                </div>
+                 
+
+
+            </div>
+            
+        </div>
+            
+    </section>
+
+        
+
+    <!-- Footer -->
+    <footer class="footer-banner">
+        <p>
+            Contact: zclawson325@gmail.com • zc214392@pennwest.edu • 724-596-2902
+                                    <br></br>
+                click on my profile picture for my other sites
+        </p>
+    </footer>
+
+    
+</body>
+</html>

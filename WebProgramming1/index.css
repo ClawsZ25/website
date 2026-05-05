@@ -1,0 +1,94 @@
+/* ===========================
+   GLOBAL PAGE STYLE
+   Matches main site's theme
+   =========================== */
+body {
+    background-color: beige;
+    font-family: "Courier New", Courier, monospace;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: maroon;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+/* Center content wrapper like the original site */
+div {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #000;
+    background-color: #fffdf6;
+    border-radius: 8px;
+}
+
+/* ===========================
+   TABLE STYLING
+   (Clean, sharp, readable)
+   =========================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+/* Header row */
+th {
+    background-color: maroon;
+    color: white;
+    padding: 10px;
+    font-size: 1.1rem;
+}
+
+/* Table cells */
+td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Alternate row shading */
+tr:nth-child(even) {
+    background-color: #f3e9d8;
+}
+
+/* Highlight row on hover */
+tr:hover {
+    background-color: #e5d8bd;
+    transition: 0.2s;
+}
+
+/* ===========================
+   LINKS
+   =========================== */
+a {
+    color: blue;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: maroon;
+    text-decoration: underline;
+}
+
+/* ===========================
+   SMALL RESPONSIVE HELP
+   =========================== */
+@media (max-width: 1100px) {
+    div {
+        width: 95%;
+    }
+    
+    table {
+        font-size: 0.9rem;
+    }
+}

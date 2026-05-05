@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="WP.css"> -->
+    <title>Web Programming: working with JSON files</title>
+    <link href="Quiz.css" rel="stylesheet" />
+    <script src="Quiz.js" defer></script>
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <h2>Trivia Time!</h2>
+        <h3>Music Info</h3>
+        <a href="https://opentdb.com/api_config.php"> Website to generate a question </a>
+
+        <input type = "button" onclick="makeQuizQuestion()" value = "Play"/>
+        <br><br>
+        <div id="QuizContainer">
+
+        </div>
+
+        <div id="ContainerQuestion">
+
+        <input type = "button" onclick="checkAnswer()" value = "CheckAnswer"/>
+        <span id="AnswersCorrect">0</span>
+        <span id="divisor symbol"> / </span>
+        <span id="TotalQuestions">0</span>
+
+
+        </div>
+
+
+
+
+
+    </div>
+
+</body>
+
+</html>

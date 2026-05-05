@@ -1,0 +1,186 @@
+@font-face {
+    font-family: 'LeagueFont';
+    src: url("Fonts/LeagueGothic-Regular.ttf"), format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#webpageTitle{
+    /*background-image: ;*/
+    background-color: #111;
+}
+
+.full-width-div {
+  width: 100%;      /* stretch across the page */
+  margin: 0;        /* remove default margins */
+  padding: 10px;       /* optional */
+}
+
+h1{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#HomepageTitle{
+    text-align: center;
+    color: yellow;
+    font-family: "LeagueFont", sans-serif;
+    
+}
+/************************************ start of logo css*************************************/
+#logo-container{
+  display: flex;
+  justify-content: center; /* horizontal centering of all logos */
+  flex-wrap: wrap;         /* allows wrapping if screen is narrow */
+  gap: 20px;               /* space between images */
+}
+#esportsLogos {
+  
+  padding: 20px;
+  background: #f4f4f4;
+}
+
+
+.logo {
+  height: 80px;
+  width: auto;
+  cursor: pointer;
+  z-index: 10;
+  overflow: hidden;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.logo::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3); 
+  box-shadow: 0 0 20px 5px rgba(0, 255, 255, 0.7);  /* x-offset, y-offset, blur, spread, color */
+  transition: opacity 0.3s ease;
+}
+
+.logo:hover{
+  box-shadow: 0 0 40px 10px rgba(0, 255, 255, 0.9); /* stronger glow on hover */
+  transform: scale(1.05);
+}
+
+#whichLeague{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: Georgia, 'Times New Roman', Times, serif
+
+}
+
+
+
+#leaguesSubcaption{
+  margin-top: 10px;
+  text-align: center;
+  font-size: 16px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/******************************end of logo css******************************/
+
+/******************* The Ticket Calculator *******************/
+ #ticketCalculator {
+  background: white;
+  border: #111;
+  border-style: dashed;
+  padding: 2rem;
+  border-radius: 12px;
+  
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 35%;
+  
+
+ }
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #444;
+}
+
+select, input[type="range"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+#output{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size:large;
+  font-weight: bold;
+  
+}
+aside {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1rem;
+  background: #f0f4ff;
+  border-radius: 8px;
+  color: #222;
+  }
+
+  #calculateButton{
+    display: block; /* tells html to treat button like <div> or <p> a.k.a basic block elemtent. This allows the following line to work ****/
+    margin: 0 auto; /* align the button horizontally center */
+    border-radius: 12px;
+    background-color: #111;
+    color: yellow;
+    text-shadow: palegoldenrod;
+    font-weight: bold;
+    height: 30px;
+    width: 100px;
+}
+#calculateButton:hover{
+  transform: scale(1.05);
+}
+
+#totalPrice {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  color: #0077ff;
+  }
+
+
+/************MAIN BODY OF WEBSITE******************/
+
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* extends content to fill the page */
+  margin: 0;
+  padding: 0;
+  background-color: whitesmoke;
+}
+
+#content {
+    flex: 1;
+}
+
+footer{
+  background-color: #111;
+  text-align: center;
+  padding: 5px 0;
+  color: yellow;
+
+}
+
+footer a {
+    color: cyan;        /* bright color stands out on dark background */
+    font-weight: bold;  /* makes it more prominent */
+    text-decoration: underline; /* remove underline if you want a clean look */
+}
+
+
+

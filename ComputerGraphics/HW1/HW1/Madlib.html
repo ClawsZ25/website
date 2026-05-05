@@ -1,0 +1,77 @@
+<html>
+    <h1>
+        MADLIB
+    </h1>
+    <body>
+
+        <!--  [One way to declare a button] <input type="button" value = "Play" id = "PlayButton" onclick="PlayButtonCall()"/>-->
+        <Li> The <span id="adj">??? </span>  <span id="noun">??? </span> <span id="verb">??? </span> all day long! </Li>
+        <br>
+        <label for="adjectiveInput">Enter an Adjective: </label>
+        <input type="text" id="adjInput" value=""/>
+        <br>
+        <br>
+        <label for="nounInput"> Enter a Noun: </label>
+        <input type="text" id="nInput" value=""/>
+        <br>
+        <br>
+        <label for="verbInput"> Enter a Verb: </label>
+        <input type="text" id="vInput" value=""/>
+
+        <br>
+        <br>
+        <input type="button" value ="Play " id="PlayButton"/>
+
+        <script>
+            "use strict"
+            //variables
+            const pbutton = document.getElementById("PlayButton")
+            
+
+            pbutton.addEventListener("click", PlayButtonCall)
+
+            function FillSpan(value, id) {
+                let element = document.getElementById(id)
+                element.innerHTML = value
+            }
+
+            function FillSpans(adjValue, nValue, vValue) {
+                FillSpan(adjValue, "adj")
+                FillSpan(nValue, "noun")
+                FillSpan(vValue, "verb")
+                
+            }
+
+
+
+            function PlayButtonCall(){
+                let wordOne = document.getElementById("adjInput").value
+                let wordTwo = document.getElementById("nInput").value
+                let wordThree = document.getElementById("vInput").value
+
+                FillSpans(wordOne, wordTwo, wordThree)
+
+                <!-- document.write("<p> The ", wordOne, " ", wordTwo, " ", wordThree,  " all day long! <p>") -->
+
+                console.log("Play Button was pressed")
+            }
+
+            
+
+        </script>
+
+        
+
+
+
+
+
+    </body>
+
+
+
+
+
+
+
+</html>

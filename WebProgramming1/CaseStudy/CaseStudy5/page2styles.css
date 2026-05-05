@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'LeagueFont';
+    src: url("Fonts/LeagueGothic-Regular.ttf"), format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#webpageTitleP2{
+    /*background-image: ;*/
+    background-color: #111;
+}
+
+.full-width-div {
+  width: 100%;      /* stretch across the page */
+  margin: 0;        /* remove default margins */
+  padding: 10px;       /* optional */
+}
+
+
+#HomepageTitleP2{
+    text-align: center;
+    color: yellow;
+    font-family: "LeagueFont", sans-serif;
+    
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* extends content to fill the page */
+  margin: 0;
+  padding: 0;
+  background-color: whitesmoke;
+}
+
+#contentP2 {
+    flex: 1;
+}
+
+footer{
+  background-color: #111;
+  text-align: center;
+  padding: 5px 0;
+  color: yellow;
+
+}
+
+footer a {
+    color: cyan;        /* bright color stands out on dark background */
+    font-weight: bold;  /* makes it more prominent */
+    text-decoration: underline; /* remove underline if you want a clean look */
+}
+
+
+/* Creating the Cyber Information Display */
+#cyberShowcase{
+  background-color: blanchedalmond;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  /* border: black;
+  border-width: 10px; */
+  border-radius: 15px;
+  padding: 10px;
+
+}
+#cyberHeader{
+  text-align: center;
+  font-weight: bold;
+}
+
+#cyberList{
+  width: fit-content;
+  margin: 0 auto;
+  margin-left: 35%;
+  padding: 10px;
+  
+}
+
+#cyberList li{
+  padding: 3px;
+}

@@ -1,0 +1,45 @@
+<html>
+<head>
+
+<script id="vertex-shader" type="x-shader/x-vertex" >
+precision highp float;
+
+attribute vec4 vPosition;
+
+// a matrix to move the item to where it needs to be
+uniform mat4 firstT;
+// a matrix to move the world
+uniform mat4 midT;
+
+void main() {
+    gl_Position = midT * firstT *  vPosition;
+}
+
+</script>
+
+<script id="fragment-shader" type="x-shader/x-fragment">
+precision highp float;
+
+void main(){
+   gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);
+}
+</script>
+
+<script src="https://mirkwood.cs.edinboro.edu/~bennett/GraphicsCode/Common/webgl-utils.js" ></script>
+<script src="https://mirkwood.cs.edinboro.edu/~bennett/GraphicsCode/Common/initShaders.js"></script>
+<script src="https://mirkwood.cs.edinboro.edu/~bennett/GraphicsCode/Common/MV.js"></script>
+<script type="text/javascript" src="https://mirkwood.cs.edinboro.edu/~bennett/f360-19/Models/bunny.js"></script>
+<script type="text/javascript" src="https://mirkwood.cs.edinboro.edu/~bennett/f360-19/Models/lizard.js"></script>
+<script type="text/javascript" src="https://mirkwood.cs.edinboro.edu/~bennett/f360-19/Models/dragon.js"></script>
+<script type="text/javascript" src="https://mirkwood.cs.edinboro.edu/~bennett/f360-19/Models/teapot.js"></script>
+
+<script type="text/javascript" src="Widget.js"></script>
+<script type="text/javascript" src="GLCanvas.js"></script>
+<script type="text/javascript" src="Program.js" defer></script>
+</head>
+<body>
+<script>
+    var canvas = new Canvas(500, 500);
+</script>
+</body>
+</html>

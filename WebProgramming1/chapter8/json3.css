@@ -1,0 +1,106 @@
+
+
+
+Page background
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f3f3f7;
+    margin: 0;
+    padding: 0;
+}
+
+/* Wrapper centers everything and keeps it neat */
+#wrapper {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Header styling */
+h2, h3 {
+    margin-top: 0;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Button styling */
+input[type="button"] {
+    background: #4a6cf7;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+input[type="button"]:hover {
+    background: #3754d0;
+}
+
+/* Table container spacing */
+#container {
+    margin-top: 25px;
+}
+
+/* Table design */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden; /* needed to round corners */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Header row */
+th {
+    background: #f0f2f7;
+    padding: 12px;
+    font-weight: bold;
+    color: #333;
+    border-bottom: 2px solid #d5d9e1;
+    text-align: left;
+}
+
+/* Data rows */
+td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Alternate rows for readability */
+tr:nth-child(even) {
+    background-color: #fafbff;
+}
+
+/* Row hover */
+tr:hover {
+    background-color: #f1f4ff;
+}
+
+/* Image styling */
+img {
+    max-width: 130px;
+    border-radius: 6px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Audio player consistency */
+audio {
+    width: 170px;
+}
+
+/* Make the table scrollable on small screens */
+@media (max-width: 750px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}

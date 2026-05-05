@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line Drawer with Midpoint Arrow</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+<canvas id="drawingCanvas" width="500" height="500"></canvas>
+
+<script>
+    const canvas = document.getElementById('drawingCanvas');
+    const context = canvas.getContext('2d');
+    let clicks = 0;
+    let points = [];
+
+    canvas.addEventListener('click', (event) => {
+        // Get the mouse click coordinates relative to the canvas
+        const rect = canvas.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+        
+        // Save the click position
+        points.push({ x: x, y: y });
+        clicks++;
+
+        // If two clicks have been made, draw a line and mark the midpoint with an arrow
+        if (clicks === 2) {
+            drawLine(points[0], points[1]);
+            drawMidpointArrow(points[0], points[1]);
+            resetClicks();
+        }
+    });
+
+    function drawLine(point1, point2) {
+        context.beginPath();
+        context.moveTo(point1.x, point1.y);
+        context.lineTo(point2.x, point2.y);
+        context.strokeStyle = 'black';
+        context.lineWidth = 2;
+        context.stroke();
+    }
+
+    function drawMidpointArrow(point1, point2) {
+        // Calculate the midpoint
+        const midpointX = (point1.x + point2.x) / 2;
+        const midpointY = (point1.y + point2.y) / 2;
+
+        // Calculate the direction of the line (angle)
+        const angle = Math.atan2(point2.y - point1.y, point2.x - point1.x);
+
+        // Draw the arrow at the midpoint
+        drawArrow(midpointX, midpointY, angle);
+    }
+
+    function drawArrow(x, y, angle) {
+        const arrowLength = 20;  // Length of the arrow
+        const arrowWidth = 10;   // Width of the arrow head
+
+        // Arrow shaft
+        context.beginPath();
+        context.moveTo(x, y);
+        context.lineTo(x + arrowLength * Math.cos(angle), y + arrowLength * Math.sin(angle));
+        context.strokeStyle = 'red';
+        context.lineWidth = 2;
+        context.stroke();
+
+        // Arrow head (two lines forming a triangle)
+        context.beginPath();
+        context.moveTo(x + arrowLength * Math.cos(angle), y + arrowLength * Math.sin(angle));
+        context.lineTo(x + (arrowLength - arrowWidth) * Math.cos(angle + Math.PI / 6), y + (arrowLength - arrowWidth) * Math.sin(angle + Math.PI / 6));
+        context.lineTo(x + (arrowLength - arrowWidth) * Math.cos(angle - Math.PI / 6), y + (arrowLength - arrowWidth) * Math.sin(angle - Math.PI / 6));
+        context.closePath();
+        context.fillStyle = 'red';
+        context.fill();
+    }
+
+    function resetClicks() {
+        clicks = 0;
+        points = [];
+    }
+</script>
+
+</body>
+</html>

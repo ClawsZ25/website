@@ -1,0 +1,54 @@
+<canvas id="canvas" width="400" height="400" style="border:1px solid #000000;"></canvas>
+<p>
+
+<script type="text/javascript">
+"use strict"
+
+let canvas = document.getElementById("canvas");
+let ctx = canvas.getContext('2d'); 
+canvas.tabIndex = 0
+
+function SetPixel(x, y, color = "black") {
+
+    x = Math.round(x)
+    y = Math.round(y)
+
+    ctx.beginPath()
+    ctx.fillStyle = color
+    ctx.fillRect(x,y,2,2);
+    ctx.fill()
+}
+
+
+let cx = canvas.width/2
+let cy = canvas.height/2
+let r = 3*cx/4
+
+function SetFour(x,y) {
+       SetPixel(cx+x,  cy-y)
+       SetPixel(cx+x,  cy+y)
+       SetPixel(cx-x,  cy+y)
+       SetPixel(cx-x,  cy-y)
+}
+
+function DrawCircle() {
+    let x = 0
+    let y =r
+
+    while (y >= x) {
+       SetFour(x,y)
+       x += 1
+       y = Math.sqrt(r*r - x*x)
+    }
+
+    SetFour(x,y)
+
+    while (y >=  0) {
+       y -= 1   
+       x = Math.sqrt(r*r - y*y)
+       SetFour(x,y)
+    }
+}
+
+DrawCircle()
+</script>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      JavaScript 7th Edition
+      Chapter 6
+      Chapter Case
+
+      Author: 
+      Date:   
+
+      Filename: js06a.html
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Chapter 6 In class</title>
+  
+   <script src="Name.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>In Class Chapter 6 Form Submission work</h1>
+    </header>
+    <form id="nameForm" name="nameForm" method="get" action="SubmitName.html">
+        <label for="firstName" name="firstNameLabel">First Name:</label>
+        <input type="text" id="firstName" name="firstName">
+        <label for="lastName" name="lastNameLabel">Last Name:</label>
+        <input type="text" id="lastName" name="lastName">
+
+       
+
+
+        <label for="cities" name="labelForCities">Pick a City</label>
+
+        <input type="hidden" id="hiddenLabel" name="hiddenLabel">
+
+        <select id="cities" name="citiesSelect">
+            <option id="cityDefault" value="..." name="defaultOption" default>...</option>
+            <option id="Pittsburgh" value="Pittsburgh" name="city1">Pittsburgh</option>
+            <option id="Erie" value="Erie" name="city2">Erie</option>
+            <option id="Harisburg" value="Harisburg" name="city3">Harisburg</option>
+        </select>
+        <div>
+            <label for="number">Pick a number</label>
+            <fieldset id="number" name="RadioButtonSelect">
+               <label for="one" name="labelOne">
+                  <input name="numberChoice" value="one" type="radio" />               
+                  <span>ONE</span>
+               </label>
+               <label for="two" name="labelTwo">               
+                  <input name="numberChoice" value="two" type="radio" />
+                  <span>TWO</span>
+               </label>
+               
+            </fieldset> 
+        </div>
+    
+         <input type="submit" name="SubmitButton" onclick="setLabels()">
+
+    </form>
+    
+   
+   
+</body>
+</html>

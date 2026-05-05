@@ -1,0 +1,625 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* Layout */
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f6f8;
+    color: #222;
+}
+
+/* ---------- Top Banner ---------- */
+.top-banner {
+    background-color: #121212;
+    color: white;
+    border-bottom: 4px solid #4da3ff;
+    padding: 2rem 3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.banner-content {
+    text-align: center;
+    margin-left: 2rem;
+}
+
+.banner-content h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.4rem;
+}
+
+.banner-content h2 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #cfcfcf;
+}
+
+/* Profile Image */
+.profile-pic {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(77, 163, 255, 0.7);
+}
+
+/* ---------- Side Navigation ---------- */
+#side-nav {
+    position: fixed;
+    right: -260px;
+    top: 0;
+    height: 100%;
+    width: 260px;
+    background-color: #1a1a1a;
+    padding: 2rem;
+    transition: right 0.3s ease;
+    z-index: 1001;
+}
+
+#side-nav.open {
+    right: 0;
+}
+
+#side-nav ul {
+    list-style: none;
+    margin-top: 2rem;
+}
+
+#side-nav li {
+    margin-bottom: 1.5rem;
+}
+
+#side-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+#side-nav a:hover {
+    color: #4da3ff;
+}
+
+#close-nav {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Overlay */
+#overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* ---------- Navigation Bar ----------*/
+.section-nav{
+    display:flex;
+    justify-content: center;
+    gap: 2rem;
+    background-color: #4da3ff;
+    border-bottom: 3px solid #1a1a1a;
+    padding: 1rem;
+    /* outline: 2px solid red; */
+
+}
+
+.nav-tab{
+    background: none;
+    border: none;
+    color: #0f172a;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0.25rem 0;
+
+    position: relative;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.nav-tab:hover {
+    color: white;
+    transform: scale(1.08);
+}
+
+/* Hover Glow for text */
+.nav-tab::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.nav-tab:hover::after {
+    transform: scaleX(1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+/* Active Tab */
+.nav-tab.active {
+    color: white;
+}
+
+.nav-tab.active::after {
+    transform: scaleX(1);
+    box-shadow: 0 0 12px rgba(255, 255, 255, 1);
+}
+
+/* ----------Content Sections ------------- */
+.content-area {
+    padding: 3rem;
+    width: 100%;
+    flex: 1; /*Grow to fill remain space */
+}
+
+.container {
+    max-width: 1300px;
+    margin: auto;
+}
+/*All sections hide by default */
+.content-section{
+    display: none
+}
+
+.content-section.active{
+    display: block;
+}
+
+/* ---------- Main Content Section---------- */
+
+
+.intro {
+    max-width: 800px;
+    margin: auto;
+}
+
+.intro h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+/* ---------- About Me ------------------ */
+/* Section Title */
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Intro paragraph */
+.about-intro {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    text-align: center;
+    line-height: 1.6;
+    font-weight: bold;
+    font-style: italic;
+    color: #121212;
+}
+
+/* Grid Layout */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Cards */
+.about-card {
+    background: #1e1e1e;
+    padding: 1.5rem;
+    border-radius: 14px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #2a2a2a;
+    position: relative;
+}
+
+.about-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background: #00bcd4; /* accent color */
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+}
+
+/* Hover Effect */
+.about-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Card Title */
+.about-card h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    color: #4da3ff;
+}
+
+/* Card Text */
+.about-card p {
+    font-size: 0.95rem;
+    color: #bbbbbb;
+    text-align: left;
+}
+/* ---------- Game Projects ------------ */
+.game-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+    /* outline: 4px solid lime; */
+}
+
+/* ------------ For Game Card ------------- */
+.game-card{
+    background-color:#121212;
+    color: #4da3ff;
+    border: none;
+    padding: 2rem;
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: left;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+
+}
+
+.game-card h4{
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.game-card p{
+    font-size: 0.9rem;
+    color: #cfcfcf;
+    text-align: left;
+
+}
+
+.game-card:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(77, 163, 255, 0.4);
+}
+
+/* ------------------- Game Detail Panel -------------- */
+.game-detail{
+    display: none;
+    margin-top: 3rem;
+    padding: 2.5rem;
+    background-color: #121212;
+    color: white;
+    border-radius: 16px;
+    position: relative;
+
+}
+
+.game-detail.active{
+    display: block;
+}
+
+
+.game-detail .subtitle{
+    color: #4da3ff;
+    margin-bottom: 1rem;
+}
+
+.screenshot-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+    margin: 1.5rem 0;
+}
+
+.screenshot-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    max-height: 180px;
+
+    box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.screenshot-gallery img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 30px rgba(77,163,255,0.4);
+}
+
+.close-game{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.download-button{
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #4da3ff;
+    color: black;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.download-button:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(77, 163, 255, 0.8);
+}
+
+/* --------- For Game video is video file is available --------*/
+.game-video {
+    max-width: 900px;
+    margin: 2rem auto;
+}
+
+.game-video video {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/*--------- The start of The Coding Projects Section -----------*/
+/* ---------- Coding Projects ------------ */
+.coding-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.coding-card {
+    background-color: #121212;
+    color: #4da3ff;
+    border: none;
+    padding: 2rem;
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: left;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.coding-card p{
+    font-size: 0.9rem;
+    color: #cfcfcf;
+    text-align: left;
+}
+
+.coding-card:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(77, 163, 255, 0.4);
+}
+
+/* Coding Detail Panel */
+.coding-detail {
+    display: none;
+    margin-top: 3rem;
+    padding: 2.5rem;
+    background-color: #121212;
+    color: white;
+    border-radius: 16px;
+    position: relative;
+}
+
+.coding-detail.active {
+    display: block;
+}
+
+.coding-detail h3{
+    color:#4da3ff;
+}
+.close-coding {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* -----------Hobbies Section ------------------- */
+
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.hobby-card {
+    background-color: #121212;
+    color: #4da3ff;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: left;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: default;
+}
+
+
+.hobby-card p {
+    font-size: 0.9rem;
+    color: #cfcfcf;
+    text-align: left;
+}
+
+.hobby-card:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(77, 163, 255, 0.4);
+}
+
+@media (max-width: 900px) {
+    .hobbies-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .hobbies-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---------- Hobby Detail ---------- */
+
+.hobby-detail {
+    display: none;
+    margin-top: 3rem;
+    padding: 2.5rem;
+    background-color: #121212;
+    color: white;
+    border-radius: 16px;
+    position: relative;
+}
+
+.hobby-detail.active {
+    display: block;
+}
+
+.hobby-detail h3,
+.hobby-detail p{
+    text-align: center;
+}
+
+.close-hobby {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* ---------- Slideshow ---------- */
+.slideshow {
+    position: relative;
+    max-width: 800px;
+    height: 450px;              /* 🔥 add this */
+    margin: 2rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;              /* 🔥 add this */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide.active {
+    display: flex;
+}
+/* Capping the image size */
+.slide img {
+    max-width: 100%;
+    max-height: 350px;   /* slightly smaller than container */
+    object-fit: contain;
+    border-radius: 10px;
+}
+/* For the image captions */
+.caption {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 350;          /* lighter text */
+    letter-spacing: 0.5px;     /* smoother spacing */
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: whitesmoke;
+    text-align: center;
+}
+
+/* Arrows */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background: rgba(77,163,255,0.8);
+}
+
+
+/* ---------- Footer ---------- */
+.footer-banner {
+    background-color: #121212;
+    color: #cfcfcf;
+    border-top: 4px solid #4da3ff;
+    text-align: center;
+    padding: 1.2rem;
+}

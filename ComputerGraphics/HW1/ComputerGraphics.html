@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Computer Graphics Projects</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0d0d0d;
+            color: white;
+        }
+
+        header {
+            text-align: center;
+            padding: 2rem;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 2rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: #121212;
+            padding: 2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            color: white;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            border: 1px solid #222;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+        .card p {
+            color: #aaa;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    Computer Graphics Projects
+</header>
+
+<div class="container">
+    <div class="grid">
+
+        <a href="HW1/Rules.html" class="card">
+            <h2>Project 1</h2>
+            <p>Introduction to graphics and rendering basics.</p>
+        </a>
+
+        <a href="HW2/H2.html" class="card">
+            <h2>Project 2</h2>
+            <p>2D transformations and matrix operations.</p>
+        </a>
+
+        <a href="HW3/HW3.html" class="card">
+            <h2>Project 3</h2>
+            <p>3D objects and perspective projection.</p>
+        </a>
+
+        <a href="HW4/display.html" class="card">
+            <h2>Project 4</h2>
+            <p>Animation and interactive graphics.</p>
+        </a>
+
+    </div>
+</div>
+
+<footer>
+    © 2026 Your Name | Computer Graphics Portfolio
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="casestudy.css">
+    <script src="casestudy.js"defer></script>
+    <title>Case Study Website</title>
+
+</head>
+
+<body>
+    <div id ="content">
+        <div id="webpageTitle" class="full-width-div">
+            <header>
+            <h1 id="HomepageTitle">League of Legends Esports</h1>
+            </header>
+        </div>
+
+        <section id="esportsLogos">
+            
+        <div id="logo-container">
+            <img id ="ltaLogo" src="Images/Lta.jpg" alt="LTA logo"  class="logo" >
+        
+            <img id ="lecLogo" src="Images/LEC.jpg" alt="LEC logo" class="logo">
+        
+            <img id ="lckLogo" src="Images/lck.jpg" alt="LCK logo" class="logo">
+        
+            <img id ="lplLogo" src="Images/lpl.jpg" alt="LPL logo" class="logo">
+       
+            <img id ="lcpLogo" src="Images/lcp.jpg" alt="LCP logo" class="logo">
+        </div>
+        
+            <p id="leaguesSubcaption">These are the League of Legends esport Leagues.</p>
+        
+        </section>
+        
+    </div>
+    <div id="ticketCalculator">
+
+        <h1>Ticket price Calculator</h1>
+        <form>
+            <label for="regions">What region</label>
+            <select name="regions" id="regions" class="FormFormat">
+                <option value="LTA">LTA</option>
+                <option value="LEC">LEC</option>
+                <option value="LCK">LCK</option>
+            </select>
+             
+            <!-- <label for="tickets">How many tickets: </label>
+            <input type="number" min="1" max="10" id="ticketAmount" name="tickets"> -->
+            <label for="ticketAmount">How many tickets:</label>
+            <input type="range" id="ticketAmount" min="1" max="10" value="1" oninput="output.value = ticketAmount.value" class="FormFormat">
+            <output id="output">1</output>
+            <br><br>
+
+            <div id="coupon-control">
+                <button type="button" class = "greenButton" onclick = "generateCoupon(true)">Good Coupon</button>
+                <button type="button" class = "redButton" onclick = "generateCoupon(false)">Bad Coupon</button>
+                <br>
+                <span id="coupon">Coupon Code Here</span>
+            </div>
+            
+
+            <label for="Discount">Enter your discount code: </label>
+            <input type="text" id="Discount" class="FormFormat" pattern="[A-Za-z]{6}[0-9]{2}">
+        </form>
+        <br>
+        <button type="button" id="calculateButton">Calculate</button>
+        <br>
+
+        <aside>
+            <span id="priceLab">TOTAL:</span>
+            <span id="totalPrice"></span> 
+        </aside>
+
+    </div>
+
+    <footer>
+    <p>Author: Zachary Clawson<br>Date: 09/26/25</p>
+    <p><a href="page2.html">CyberSecurity CaseStudy</a></p>
+    <p><a href="page3.html">Leave a Review</a></p>
+    </footer>
+    
+</body>
+
+<!-- <footer>
+    <p>Author: Zachary Clawson<br>Date: 09/26/25</p>
+    <p><a href="page2.html">My League of Legends Experience.</a></p>
+</footer> -->
+
+</html>

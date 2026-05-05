@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cookies Practice: Reading a cookie/title</title>
+
+<script>
+function readCookie() {
+    let fields = {};
+    if (document.cookie) {
+        let cookieList = document.cookie.split(";");
+        for (let items of cookieList) {
+            let cookie = items.split("=");
+            let name = cookie[0].trim();
+            let value = decodeURIComponent(cookie[1]);
+            fields[name] = value;
+        }
+    }
+    return fields;
+}
+
+function checkCookie() {
+    if (document.cookie) {
+        const info1 = document.getElementById("value1");
+        const info2 = document.getElementById("value2");
+        const info3 = document.getElementById("value3");
+        const info4 = document.getElementById("value4");
+        
+
+        let CookieData = readCookie();
+
+        info1.value = CookieData.name;
+        info2.value = CookieData.num;
+        info3.value = CookieData.Addr;
+        info4.value = CookieData.Expire;
+        
+    } else {
+        alert("No cookie Data found");
+    }
+}
+</script>
+
+<link rel="stylesheet" href="cookie.css" />
+</head>
+
+<body onload="checkCookie()">
+
+<h2>Reading some Cookies!</h2>
+
+<form id="valueForm">
+    username:<br>
+    <input type="text" id="value1"><br><br>
+
+    num:<br>
+    <input type="text" id="value2"><br><br>
+
+    Addr:<br>
+    <input type="text" id="value3"><br><br>
+
+    Expire:<br>
+    <input type="text" id="value4"><br><br>
+</form>
+
+</body>
+</html>

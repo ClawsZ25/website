@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncing Triangles in Formation</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+<canvas id="triangleCanvas" width="600" height="400"></canvas>
+
+<script>
+    const canvas = document.getElementById('triangleCanvas');
+    const ctx = canvas.getContext('2d');
+
+    const triangleSize = 20;
+    const rowCount = 3;
+    const colCount = 4;
+    const horizontalSpacing = 100; // Horizontal space between triangles
+    const verticalSpacing = 60; // Vertical space between triangles
+    const movementStep = 10; // How much the triangles move down on each bounce
+
+    // Variables to control movement
+    let dx = 2; // Speed in the horizontal direction
+    let groupY = 50; // Starting y position of the group
+    let groupX = 50; // Starting x position of the group
+
+    // Function to draw a single triangle
+    function drawTriangle(x, y, size, color) {
+        ctx.beginPath();
+        ctx.moveTo(x, y); // Top point
+        ctx.lineTo(x - size, y + size); // Bottom-left point
+        ctx.lineTo(x + size, y + size); // Bottom-right point
+        ctx.closePath();
+        ctx.fillStyle = color;
+        ctx.fill();
+    }
+
+    // Function to draw the entire group of triangles
+    function drawTriangles() {
+        for (let row = 0; row < rowCount; row++) {
+            for (let col = 0; col < colCount; col++) {
+                let x = groupX + col * horizontalSpacing;
+                let y = groupY + row * verticalSpacing;
+                let color = `hsl(${(row + col) * 50}, 100%, 50%)`; // Unique color per triangle
+                drawTriangle(x, y, triangleSize, color);
+            }
+        }
+    }
+
+    // Function to update the position of the group
+    function updatePosition() {
+        // Clear the canvas
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Move the group horizontally
+        groupX += dx;
+
+        // Check if the group hits the walls, and if so, move them down and reverse direction
+        if (groupX + colCount * horizontalSpacing - triangleSize > canvas.width || groupX < 0) {
+            dx = -dx; // Reverse direction
+            groupY += movementStep; // Move the group down
+        }
+
+        // Draw the triangles in their updated position
+        drawTriangles();
+
+        // Request the next frame for animation
+        requestAnimationFrame(updatePosition);
+    }
+
+    // Start the animation
+    updatePosition();
+</script>
+
+</body>
+</html>

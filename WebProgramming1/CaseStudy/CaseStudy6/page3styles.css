@@ -1,0 +1,95 @@
+@font-face {
+    font-family: 'LeagueFont';
+    src: url("Font/LeagueGothic-Regular.ttf"), format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#webpageTitleP3{
+    /*background-image: ;*/
+    background-color: #111;
+}
+
+.full-width-div {
+  width: 100%;      /* stretch across the page */
+  margin: 0;        /* remove default margins */
+  padding: 10px;       /* optional */
+}
+
+
+#HomepageTitleP3{
+    text-align: center;
+    color: yellow;
+    font-family: "LeagueFont", sans-serif;
+    
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* extends content to fill the page */
+  margin: 0;
+  padding: 0;
+  background-color: whitesmoke;
+}
+
+#contentP2 {
+    flex: 1;
+}
+
+footer{
+  background-color: #111;
+  text-align: center;
+  padding: 5px 0;
+  color: yellow;
+
+}
+
+footer a {
+    color: cyan;        /* bright color stands out on dark background */
+    font-weight: bold;  /* makes it more prominent */
+    text-decoration: underline; /* remove underline if you want a clean look */
+}
+
+
+/* Creating the For Form display */
+/*declares that input and textarea elemnts will calculate their padding to be inside of a border*/
+* {
+  box-sizing: border-box;
+}
+
+
+#reviewForm{
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+    max-width: 400px;
+    margin: auto;
+    border: #111;
+    border-radius: .5rem;
+    border-style: groove;
+    padding: 1rem;
+    background-color: aliceblue;
+    margin-top: 15px;
+}
+
+.asterick{
+    color: red;
+    font-weight: bold;
+}
+label, input, textarea, select{
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    width: 100%;
+
+}
+
+#reviewValidation{
+    border: 2px solid #111;
+    background-color: lightgreen;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
+    visibility: hidden;
+}

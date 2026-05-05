@@ -1,0 +1,22 @@
+<head>
+
+   </head>
+   
+   <body>
+   <h1>Problem5</h1>
+   Click twice to draw a line.
+   <p>
+   <canvas id="canvas" width="750" height="500" style="border:1px solid #000000;"></canvas>
+   <p>
+   
+   <script type="text/javascript" src="ArrowLine.js"></script>
+   <script type="text/javascript" src="DDAalgorithm.js"></script>
+   
+   <script type="text/javascript">
+   
+   canvas = document.getElementById("canvas");
+   ctx = canvas.getContext('2d'); 
+   canvas.tabIndex = 0;
+   
+   canvas.addEventListener("click", ClickHandler);
+   </script>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Exam2.css">
+    <script src="Exam2.js" defer></script>
+    <title>Web Programming Page Exam 2</title>
+
+</head>
+
+<body>
+    <h1> Exam 2</h1>
+
+    <form id="Exam2Form" name="Exam2Form" method="get" action="Exam2Submission.html"> 
+        <label for="firstname">First Name</label>
+        <input type="text" id="firstname" name="firstname" required>
+        <br>
+        <label for="lastname">Last Name</label>
+        <input type="text" id="lastname" name="lastname" required>
+        <br>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required >
+        <div id="StateSelection">
+            <label for="states">Pick A State</label>
+            <fieldset id="states" name="RadioButtonSelectState">
+               <label class="state">
+                  <input id="state" name="state" value="PA" type="radio" />               
+                  <span>PA</span>
+               </label>
+               <label class="state">
+                  <input id="state" name="state" value="OH" type="radio" />               
+                  <span>OH</span>
+               </label>
+               <label class="state">
+                  <input id="state" name="state" value="NY" type="radio" />               
+                  <span>NY</span>
+               </label>
+               <label class="state">
+                  <input id="state" name="state" value="WV" type="radio" />               
+                  <span>WV</span>
+               </label>
+               
+               
+            </fieldset> 
+        </div>
+
+        <input type="submit" id="submitButton" name="submitButton" onclick="validate()"/>
+
+
+    </form>
+    
+   
+    
+    
+    
+</body>
+
+
+</html>

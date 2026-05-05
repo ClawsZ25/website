@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="casestudy.css">
+    <script src="casestudy.js"defer></script>
+    <title>Case Study Website</title>
+
+</head>
+
+<body>
+    <div id ="content">
+        <div id="webpageTitle" class="full-width-div">
+            <header>
+            <h1 id="HomepageTitle">League of Legends Esports</h1>
+            </header>
+        </div>
+
+        <section id="esportsLogos">
+            
+        <div id="logo-container">
+            <img id ="ltaLogo" src="images/Lta.jpg" alt="LTA logo"  class="logo" >
+        
+            <img id ="lecLogo" src="images/LEC.jpg" alt="LEC logo" class="logo">
+        
+            <img id ="lckLogo" src="images/lck.jpg" alt="LCK logo" class="logo">
+        
+            <img id ="lplLogo" src="images/lpl.jpg" alt="LPL logo" class="logo">
+       
+            <img id ="lcpLogo" src="images/lcp.jpg" alt="LCP logo" class="logo">
+        </div>
+        
+            <p id="leaguesSubcaption">These are the League of Legends esport Leagues.</p>
+        
+        </section>
+        
+    </div>
+    <div id="ticketCalculator">
+
+        <h1>Ticket price Calculator</h1>
+        <form>
+            <label for="regions">What region</label>
+            <select name="regions" id="regions">
+                <option value="LTA">LTA</option>
+                <option value="LEC">LEC</option>
+                <option value="LCK">LCK</option>
+            </select>
+             <br> <br> <!--double break for spacing -->
+            <!-- <label for="tickets">How many tickets: </label>
+            <input type="number" min="1" max="10" id="ticketAmount" name="tickets"> -->
+            <label for="ticketAmount">How many tickets:</label>
+            <input type="range" id="ticketAmount" min="1" max="10" value="1" oninput="output.value = ticketAmount.value">
+            <output id="output">1</output>
+        </form>
+        <br>
+        <button type="button" id="calculateButton">Calculate</button>
+        <br>
+
+        <aside>
+            <span id="priceLab">TOTAL:</span>
+            <span id="totalPrice"></span> 
+        </aside>
+
+    </div>
+    
+</body>
+
+<footer>
+    <p>Author: Zachary Clawson<br>Date: 09/12/25</p>
+    <p><a href="page2.html">My League of Legends Experience.</a></p>
+</footer>
+
+</html>

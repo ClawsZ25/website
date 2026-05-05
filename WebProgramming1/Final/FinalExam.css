@@ -1,0 +1,69 @@
+table, th, td{
+    border-collapse: collapse;
+    border:1px solid black;
+    width: 100%;
+    padding-right: 50px;
+    /* padding: auto; */
+
+}
+
+#wrapper{
+    text-align: center;
+    background-color: orange;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    padding-inline: 10px;
+    padding-bottom: 10px;
+    border-radius: 1rem;
+    border-width: 10px;
+}
+
+#container{
+    background-color: rgb(253, 255, 151);
+    font-style: italic;
+    text-align: left;
+    -webkit-text-fill-color: rgb(3, 3, 3);
+}
+
+#writeCookieOutputDiv{
+    background-color: aqua;
+    -webkit-text-fill-color: black;
+    text-align: center;
+    border-radius: 10rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: oblique;
+    padding: 10px;
+     border:5px solid black;
+    
+
+}
+
+input{
+    border: 2px solid black;
+    border-radius: 5rem;
+}
+
+h2, h3{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+}
+
+.buttonClass{
+    border: 2px solid black;
+    border-radius: 5rem;
+    background-color: aliceblue;
+}
+
+#cookieReadOutputDiv{
+    background-color: aqua;
+    -webkit-text-fill-color: black;
+    text-align: center;
+    border-radius: 10rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: oblique;
+    padding: 10px;
+    border:5px solid black;
+    
+
+}
